@@ -1,0 +1,15 @@
+<h1>Ticket#index</h1>
+<table>
+<tr><td>Subjekt</td><td>Request</td></tr>
+<% if !@tickets.empty? %> 
+	<% @tickets.each do |ticket| %>
+		<tr><td><%= ticket.subject %></td><td><%= ticket.request.slice(0..10) %></td>
+		<td><%= link_to 'Edit', '/edit', :method => :put %></td><td><%= link_to 'Show', ticket %></td>
+		<td><%= link_to 'Delete', '/destroy', :method => :delete %></td></tr>
+	<% end %>
+
+<% else %>
+	<b>Es sind noch keine Tickets vorhanden</b>
+<% end %>
+</table>
+<% link_to 'Neues Ticket anlegen', :method => :post %>
