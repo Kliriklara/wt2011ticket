@@ -1,0 +1,10 @@
+<h1>Artikel</h1>
+
+<ul>
+  <% @tickets.each do |ticket| %>
+    <li>
+      <%= link_to ticket.subject, ticket %>
+      (<%= link_to "Create", create_ticket_path(ticket) %>)
+    </li>
+  <% end %>
+</ul>
