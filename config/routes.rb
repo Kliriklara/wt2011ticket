@@ -1,5 +1,9 @@
 TicketApp::Application.routes.draw do
 
+  get "tickets/create"
+
+  get "tickets/edit"
+
   get "tickets/index"
   get "tickets/show"
 
