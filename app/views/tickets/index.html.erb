@@ -1,0 +1,7 @@
+<h1>Tickets#index</h1>
+
+<ul>
+<% @tickets.each do |ticket| %>
+	<li><%= link_to ticket.subject, ticket_path(ticket) %>: <%= ticket.content %></li>
+<% end %>
+</ul>	
