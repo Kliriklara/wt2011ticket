@@ -1,0 +1,10 @@
+<h1>Tickets</h1>
+
+<ul>
+  <% @tickets.each do |ticket| %>
+    <li>
+      <%= link_to ticket.subject, ticket %><br />
+	  <%= truncate(ticket.request) %>
+    </li>
+  <% end %>
+</ul>

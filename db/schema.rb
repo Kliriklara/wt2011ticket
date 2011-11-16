@@ -14,7 +14,6 @@
 ActiveRecord::Schema.define(:version => 20111116094932) do
 
   create_table "tickets", :force => true do |t|
-    t.integer  "ticket_id"
     t.string   "subject"
     t.text     "request"
     t.datetime "created_at"
