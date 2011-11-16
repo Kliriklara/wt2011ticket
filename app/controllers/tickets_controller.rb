@@ -9,7 +9,8 @@ class TicketsController < ApplicationController
  end
 
  def create
-  @ticket = Ticket.new
+  @ticket = Ticket.new.save
+  redirect_to tickets_path
  end
  
  def new

@@ -1,10 +1,11 @@
-<h1>Artikel</h1>
+<h1>Ticket</h1>
+
+<%= link_to "New Ticket", new_ticket_path %>
 
 <ul>
   <% @tickets.each do |ticket| %>
     <li>
       <%= link_to ticket.subject, ticket %>
-      (<%= link_to "Create", create_ticket_path(ticket) %>)
     </li>
   <% end %>
 </ul>
