@@ -17,4 +17,12 @@ class TicketsController < ApplicationController
   @ticket = Ticket.new
  end
  
+ def edit
+  @ticket = Ticket.find(params[:id])
+ end
+ 
+ def update
+  @ticket.update_attributes(params[:ticket])
+ end
+ 
 end
