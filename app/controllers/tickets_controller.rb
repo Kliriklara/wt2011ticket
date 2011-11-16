@@ -22,7 +22,9 @@ class TicketsController < ApplicationController
  end
  
  def update
+  @ticket = Ticket.find(params[:id])
   @ticket.update_attributes(params[:ticket])
+  redirect_to tickets_path
  end
  
 end

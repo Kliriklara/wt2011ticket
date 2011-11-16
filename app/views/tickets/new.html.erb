@@ -1,6 +1,6 @@
 <h1>Ticket</h1>
 
-<%= form_for @ticket, :as => :ticket, :url => tickets_path do |t| %>
+<%= form_for @ticket do |t| %>
   <p>
     <%= t.label :subject %><br />
     <%= t.text_field :subject %>
