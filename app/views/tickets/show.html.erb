@@ -1,4 +1,7 @@
 <h1><%= @tickets.subject %></h1>
 <p><%= @tickets.request %></p>
 
-<p><%= link_to 'Ticket ändern', edit_ticket_path(@tickets) %></p>
+<p>
+  <%= link_to 'Ticket ändern', edit_ticket_path(@tickets) %><br />
+  <%= link_to 'Ticket löschen', :ticket, confirm: 'Bist du sicher, dass du dieses Ticket löschen möchtest?', method: :delete %>
+</p>
