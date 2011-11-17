@@ -1,0 +1,8 @@
+<h1>My Requests</h1>
+<%= link_to "New Request", new_ticket_path %>
+<br/><br/>
+<% @tickets.each do |ticket| %>
+<%= link_to ticket.subject, ticket %>
+(<%= link_to "edit", edit_ticket_path(ticket) %>, <%= link_to "delete", ticket_path(ticket), :method => :delete, :confirm => "Are you sure?" %>)
+<br/>
+<% end %>
