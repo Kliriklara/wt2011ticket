@@ -1,4 +1,13 @@
 TicketApp::Application.routes.draw do
+  get "ticket/index"
+  
+  resources :ticket
+	match "/tickets/:id/edit" => "Ticket#edit", :as => "edit_ticket"
+	match "/tickets/:id" => "Ticket#show", :as => "show_ticket"
+	match "/tickets/:id/destroy" => "Ticket#delete", :as => "delete_ticket"
+
+  root :to => 'Ticket#index'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +57,7 @@ TicketApp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+
 
   # See how all your routes lay out with "rake routes"
 

@@ -1,7 +1,15 @@
-
 <h2>Neues Ticket anlegen</h2>
 
-<% form_for(@ticket) do |t| %>
-
-
+<%= form_for @ticket, :as => :ticket, :url => ticket_path do |f| %>
+  <p>
+    <%= f.label :sequence %><br />
+    <%= f.text_field :sequence %>
+  </p>
+  <p>
+    <%= f.label :response %><br />
+    <%= f.text_area :response %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
 <% end %>
