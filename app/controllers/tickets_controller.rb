@@ -8,13 +8,21 @@ class TicketsController < ApplicationController
     @tickets = Ticket.find( params[:id] )
   end
   
+  def new
+    @tickets = Ticket.new
+  end
   def create
     @tickets = Ticket.new( params[:ticket] ).save
     redirect_to tickets_path
   end
- 
-  def new
-    @tickets = Ticket.new
+
+  def edit
+    @tickets = Ticket.find( params[:id] )
+  end
+  def update
+    @tickets = Ticket.find( params[:id] )
+    @tickets.update_attributes( params[:ticket] )
+    redirect_to tickets_path
   end
 
 end

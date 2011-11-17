@@ -1,2 +1,4 @@
 <h1><%= @tickets.subject %></h1>
 <p><%= @tickets.request %></p>
+
+<p><%= link_to 'Ticket ändern', edit_ticket_path(@tickets) %></p>
