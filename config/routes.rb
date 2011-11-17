@@ -1,9 +1,6 @@
 TicketApp::Application.routes.draw do
 
-  get "tickets/show"
+  resources :tickets
+  root :to => "tickets#index"
 
-  get "tickets/detail"
-
-	resources :tickets
-	
 end
