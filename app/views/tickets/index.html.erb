@@ -5,7 +5,7 @@
       <%= link_to ticket.subject, ticket %>
       </h1>
       <p>
-      <%= ticket.request %>
+      <%= ticket.request.truncate(100) %>
       </p>
     </li>
   <% end %>
