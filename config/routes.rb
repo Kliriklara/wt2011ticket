@@ -1,4 +1,14 @@
 TicketApp::Application.routes.draw do
+#  get "tickets/index"
+
+ # get "tickets/create"
+
+  #get "tickets/delete"
+
+  #get "tickets/update"
+  
+  resources :tickets
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

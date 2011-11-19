@@ -1,0 +1,13 @@
+<h1>Tickets#index</h1>
+  <% @tickets.each do |ticket| %>
+    <li>
+      <h1>
+      <%= link_to ticket.subject, ticket %>
+      </h1>
+      <p>
+      <%= ticket.request %>
+      </p>
+    </li>
+  <% end %>
+  
+  <%= link_to "new", new_ticket_path %>

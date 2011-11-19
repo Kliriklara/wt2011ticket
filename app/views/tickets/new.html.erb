@@ -1,0 +1,8 @@
+<h1>Edit Ticket</h1>
+<%= form_for(@ticket) do |f| %>
+  <%= f.label :subject %>
+  <%= f.text_field :subject %><br>
+  <%= f.label :request %>
+  <%= f.text_area :request %><br>
+  <%= f.submit "change" %>
+<%end%>
