@@ -2,5 +2,6 @@
 
 <%= @ticket.request %>
 
+<p><%= link_to "Löschen", ticket_path(@ticket), :method => :delete, :confirm => "Möchtest du das Ticket wirklich löschen?" %></p>
 <p><%= link_to "Ändern", edit_ticket_path(@ticket) %></p>
 <p><%= link_to "Zurück", tickets_path %></p>

@@ -26,4 +26,10 @@ class TicketsController < ApplicationController
     @ticket.update_attributes(params[:ticket])
     redirect_to tickets_path
   end
+
+  def destroy
+    @ticket = Ticket.find(params[:id])
+    @ticket.destroy
+    redirect_to tickets_path
+  end
 end
