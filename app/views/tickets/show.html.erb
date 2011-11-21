@@ -2,4 +2,5 @@
 
 <%= @ticket.request %>
 
-<%= link_to "Zurück", tickets_path %>
+<p><%= link_to "Ändern", edit_ticket_path(@ticket) %></p>
+<p><%= link_to "Zurück", tickets_path %></p>
