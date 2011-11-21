@@ -1,0 +1,15 @@
+<h1>Neues Ticket</h1>
+
+<%= form_for(@ticket) do |f| %>
+  <p>
+    <%= f.text_field :subject %>
+  </p>
+  <p>
+    <%= f.text_area :request %>
+  </p>
+  <p>
+    <%= f.submit "Speichern" %>
+  </p>
+<% end %>
+
+<%= link_to "Zurück", tickets_path %>

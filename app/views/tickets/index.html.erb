@@ -1,5 +1,7 @@
 <h1>Tickets</h1>
 
+<%= link_to "Neues Ticket", new_ticket_path %>
+
 <ul>
   <% @tickets.each do |ticket| %>
     <li><%= link_to ticket.subject, ticket %> / <%= truncate ticket.request %></li>
