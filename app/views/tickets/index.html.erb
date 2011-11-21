@@ -2,6 +2,6 @@
 
 <ul>
   <% @tickets.each do |ticket| %>
-    <li><%= ticket.subject %> / <%= truncate ticket.request %></li>
+    <li><%= link_to ticket.subject, ticket %> / <%= truncate ticket.request %></li>
   <% end %>
 </ul>
